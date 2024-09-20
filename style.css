@@ -6,7 +6,8 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+    font-family:monospace;
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
@@ -16,7 +17,7 @@ body {
 .container {
     width: 90%;
     max-width: 1200px;
-    margin: auto;
+    /* margin: auto; */
     overflow: hidden;
     padding: 20px 0;
 }
@@ -29,7 +30,6 @@ body {
 }
 
 .navbar .logo a {
-    display: inline;
     color: #fff;
     font-size: 35px;
     text-decoration: none;
@@ -40,6 +40,11 @@ body {
     list-style: none;
     float: right;
 }
+
+/* .navbar .nav-links:hover {
+    color: #333;
+    font-size: larger;
+} */
 
 .navbar .nav-links li {
     display: inline;
@@ -67,17 +72,19 @@ body {
 }
 
 .hero h1 {
+color: #333;
     font-size: 48px;
     margin-bottom: 20px;
 }
 
 .hero p {
+color:#031e39;
     font-size: 20px;
     margin-bottom: 30px;
 }
 
 .hero .btn {
-    background-color: #ff6600;
+    background-color:#321a09;
     color: #fff;
     padding: 15px 30px;
     text-decoration: none;
@@ -86,7 +93,7 @@ body {
 }
 
 .hero .btn:hover {
-    background-color: #e65c00;
+    background-color: #ff6600;
 }
 
 /* Features Section */
