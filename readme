@@ -1,0 +1,12 @@
+healthcare-management/
+│
+├── index.html
+├── login.html
+├── dashboard.html
+├── css/
+│   └── styles.css
+├── js/
+│   └── scripts.js
+└── assets/
+    ├── images/
+    └── fonts/
