@@ -138,7 +138,8 @@ animation:
 /* Features Section */
 .features {
     padding: 60px 0;
-    background-color: #fff;
+    background-color:#181616;
+    /* background-color: #fff; */
     /* background-color: #281902; */
     text-align: center;
 }
@@ -146,6 +147,7 @@ animation:
 .features h2 {
     margin-bottom: 40px;
     font-size: 32px;
+    color: white;
 }
 
 .feature-cards {
@@ -175,18 +177,22 @@ animation:
 .feature-cards .card p {
     font-size: 16px;
     color: #ccc;
+    /* color: white; */
 }
 
 /* Contact Section */
 .contact {
     padding: 60px 0;
-    background-color: #f4f4f4;
+    /* background-color: #f4f4f4; */
+    background-color:#181616;
+    
     text-align: center;
 }
 
 .contact h2 {
     margin-bottom: 40px;
     font-size: 32px;
+    color: white;
 }
 
 .contact form {
@@ -200,12 +206,20 @@ animation:
     width: 100%;
     padding: 15px;
     margin-bottom: 20px;
+    background-color: #22252b;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
+.contact form input,
+.contact form textarea,
+.contact form select:hover{
+    
+    border: #563402 2px solid;
+}
+
 .contact form .btn {
-    background-color: #0066cc;
+    background-color:  #563402;
     color: #fff;
     padding: 15px 30px;
     border: none;
@@ -215,7 +229,9 @@ animation:
 }
 
 .contact form .btn:hover {
-    background-color: #005bb5;
+    background-color:#281902;
+    /* border: rgb(192, 110, 110) 2px solid; */
+    border: white 2px solid;
 }
 
 /* Footer */
@@ -256,7 +272,7 @@ footer {
 /* Login Section */
 .login-section {
     padding: 60px 0;
-    background-color: #fff;
+    background-color:whitesmoke;
     text-align: center;
 }
 
@@ -287,7 +303,7 @@ footer {
 }
 
 .login-section form .btn {
-    background-color: #0066cc;
+    background-color: #563402;
     color: #fff;
     padding: 10px 20px;
     border: none;
