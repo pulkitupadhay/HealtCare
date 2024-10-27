@@ -25,7 +25,7 @@
 
         .navbar .nav-links li {
             display: inline;
-            margin-right: 20px;
+            margin-right: 10px;
         }
 
         .navbar .nav-links a {
@@ -55,7 +55,8 @@
 
         .signup-section input[type="text"],
         .signup-section input[type="email"],
-        .signup-section input[type="password"] {
+        .signup-section input[type="password"],
+        .signup-section select {
             width: calc(100% - 20px);
             padding: 10px;
             margin-bottom: 15px;
@@ -90,7 +91,9 @@
     <nav class="navbar">
         <div class="container">
             <div class="logo">
-                <a href="index.html" style="display:inline; font-family:'Protest Guerrilla';">MediFusion</a>
+                <a href="index.html" style="display: inline; font-family: 'Protest Guerrilla';">
+                    Medi<span style="color: #9f712d;">Fusion</span>
+                </a>
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
@@ -108,6 +111,14 @@
         <div class="container">
             <h2>Create an Account</h2>
             <form id="signup-form">
+                <label for="role">Select Role</label>
+                <select id="role" name="role" required>
+                    <option value="" disabled selected>Select your role</option>
+                    <option value="admin">Admin</option>
+                    <option value="doctor">Doctor</option>
+                    <option value="patient">Patient</option>
+                </select>
+
                 <label for="name">Full Name</label>
                 <input type="text" id="name" name="name" placeholder="Enter your full name" required>
 
@@ -130,14 +141,14 @@
         <h2>Contacts</h2><hr>
         <div class="para">
            <p>Phone no : +91 ..<br>Email Id : 
-               <a href="mailto:..@gmail.com" style="color:white;text-decoration:none;">..@gmail.com</a><br></p>
+               <a href="#" style="color:white;text-decoration:none;">..@gmail.com</a><br></p>
            </div>
 
            <!-- Social Media Links -->
            <div id="social">
                <ul>
                    <!-- Instagram -->
-                   <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="100"><path fill="#fff" d="{...}"></path></svg></a></li> 
+                   <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" x "0px" y "0px" width "40" height "100"><path fill="#fff" d="{...}"></path></svg></a></li> 
                    <!-- Add other social media links here -->
                </ul>
            </div>
