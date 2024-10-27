@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - MediFusion</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: black;
+            padding: 10px 0;
+        }
+
+        .navbar .nav-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .navbar .nav-links li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .navbar .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .signup-section {
+            background-color: white;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .signup-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .signup-section label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .signup-section input[type="text"],
+        .signup-section input[type="email"],
+        .signup-section input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        .signup-section button {
+            width: 100%;
+            padding: 10px;
+            background-color: #8999f3;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .signup-section button:hover {
+            background-color: blue;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" style="display:inline; font-family:'Protest Guerrilla';">MediFusion</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sign Up Form -->
+    <section class="signup-section">
+        <div class="container">
+            <h2>Create an Account</h2>
+            <form id="signup-form">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Create a password" required>
+
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+
+                <button type="submit" class="btn">Sign Up</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h2>Contacts</h2><hr>
+        <div class="para">
+           <p>Phone no : +91 ..<br>Email Id : 
+               <a href="mailto:..@gmail.com" style="color:white;text-decoration:none;">..@gmail.com</a><br></p>
+           </div>
+
+           <!-- Social Media Links -->
+           <div id="social">
+               <ul>
+                   <!-- Instagram -->
+                   <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="100"><path fill="#fff" d="{...}"></path></svg></a></li> 
+                   <!-- Add other social media links here -->
+               </ul>
+           </div>
+
+           <!-- Copyright -->
+           <p>&copy; 2024 MediFusion. All rights reserved.</p> 
+    </footer>
+
+</body>
+</html>
