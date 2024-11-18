@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            // Implement form submission logic (e.g., via AJAX)
             alert('Thank you for contacting us!');
             contactForm.reset();
         });
