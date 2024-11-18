@@ -67,7 +67,7 @@ const login = async (req, res) => {
         }
 
         
-        if (role !== user.role) {
+        if (role!== user.role) {
             return res.status(403).json({
                 message: 'Role mismatch', 
                 success: false 
