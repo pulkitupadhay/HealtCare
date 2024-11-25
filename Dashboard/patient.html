@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard | MediFusion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .navbar {
+            background-color: black;
+            padding: 1rem 2rem;
+        }
+        .navbar .logo {
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+        .sidebar {
+            width: 200px;
+            height: 100vh;
+            background-color: black;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 2rem;
+            color: white;
+        }
+        .sidebar h2 {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: #9f712d;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            position: relative;
+            top: 3%;
+        }
+        .sidebar ul li {
+            margin: 1rem 0;
+        }
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+        }
+        .sidebar ul li a i {
+            margin-right: 1rem;
+        }
+        .content {
+            margin-left: 260px;
+            padding: 2rem;
+        }
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            text-align: center;
+            transition: 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .card h3 {
+            margin: 1rem 0;
+            color: #9f712d;
+        }
+        .card p {
+            color: #666;
+        }
+        .btn {
+            padding: 0.5rem 1.5rem;
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #9f712d;
+        }
+        .sidebar .logo a{
+            color: white;
+            text-decoration: none;
+            font-size: 25px;
+            position: relative;
+            left: 8px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <i class="fa-solid fa-hand-holding-droplet  fa-2x"></i>
+            <a href="index.html" style="display: inline; font-family: 'Protest Guerrilla';">
+                Medi<span style="color: #9f712d;">Fusion</span>
+            </a>
+        </div>
+        <ul>
+            <li><a href="#"><i class="fa-solid fa-calendar-check"></i> Book Appointment</a></li>
+            <li><a href="#"><i class="fa-solid fa-file-medical"></i> Medical Records</a></li>
+            <li><a href="#"><i class="fa-solid fa-credit-card"></i> Billing</a></li>
+            <li><a href="#"><i class="fa-solid fa-heart"></i> Health Tips</a></li>
+            <li><a href="#"><i class="fa-solid fa-user-cog"></i> Profile Settings</a></li>
+            <li><a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>Welcome, [Patient Name]!</h1>
+        <p>Manage your health with ease.</p>
+
+        <div class="card-container">
+            <div class="card">
+                <h3>Book Appointment</h3>
+                <p>Schedule your next consultation with just a click.</p>
+                <a href="#" class="btn">Book Now</a>
+            </div>
+            <div class="card">
+                <h3>Medical Records</h3>
+                <p>Access your past and current medical history securely.</p>
+                <a href="#" class="btn">View Records</a>
+            </div>
+            <div class="card">
+                <h3>Billing</h3>
+                <p>Track payments and view past invoices easily.</p>
+                <a href="#" class="btn">View Billing</a>
+            </div>
+            <div class="card">
+                <h3>Health Tips</h3>
+                <p>Get personalized tips to maintain your well-being.</p>
+                <a href="#" class="btn">View Tips</a>
+            </div>
+            <div class="card">
+                <h3>Profile Settings</h3>
+                <p>Update your profile details and preferences.</p>
+                <a href="#" class="btn">Edit Profile</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
