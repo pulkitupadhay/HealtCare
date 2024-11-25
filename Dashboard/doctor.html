@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Dashboard | MediFusion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .navbar {
+            background-color: #304ffe;
+            padding: 1rem 2rem;
+        }
+        .navbar .logo {
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+        .navbar .nav-links li {
+            list-style: none;
+            display: inline;
+            margin: 0 1rem;
+        }
+        .navbar .nav-links a {
+            text-decoration: none;
+            color: white;
+        }
+        .sidebar {
+            width: 200px;
+            height: 100vh;
+            background-color: black;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 2rem;
+            color: white;
+        }
+        .sidebar h2 {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: #9f712d;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            position: relative;
+            top: 3%;
+            position: relative;
+            left: 8px;
+        }
+        .sidebar ul li {
+            margin: 1rem 0;
+        }
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+        }
+        .sidebar ul li a i {
+            margin-right: 1rem;
+        }
+        .content {
+            margin-left: 260px;
+            padding: 2rem;
+        }
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            text-align: center;
+            transition: 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .card h3 {
+            margin: 1rem 0;
+            color: #9f712d;
+        }
+        .card p {
+            color: #666;
+        }
+        .btn {
+            padding: 0.5rem 1.5rem;
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #9f712d;
+        }
+        .sidebar .logo a{
+            color: white;
+            text-decoration: none;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <i class="fa-solid fa-hand-holding-droplet  fa-2x"></i>
+            <a href="index.html" style="display: inline; font-family: 'Protest Guerrilla';">
+                Medi<span style="color: #9f712d;">Fusion</span>
+            </a>
+        </div>
+        <ul>
+            <li><a href="#"><i class="fa-solid fa-user"></i> Patients</a></li>
+            <li><a href="#"><i class="fa-solid fa-calendar-check"></i> Appointments</a></li>
+            <li><a href="#"><i class="fa-solid fa-file-medical"></i> Medical Records</a></li>
+            <li><a href="#"><i class="fa-solid fa-credit-card"></i> Billing Overview</a></li>
+            <li><a href="#"><i class="fa-solid fa-user-cog"></i> Profile Settings</a></li>
+            <li><a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>Welcome, Doctor!</h1>
+        <p>Here are your quick links:</p>
+
+        <div class="card-container">
+            <div class="card">
+                <h3>Patients</h3>
+                <p>View and manage patient details effortlessly.</p>
+                <a href="#" class="btn">Manage Patients</a>
+            </div>
+            <div class="card">
+                <h3>Appointments</h3>
+                <p>Schedule and view upcoming appointments.</p>
+                <a href="#" class="btn">View Appointments</a>
+            </div>
+            <div class="card">
+                <h3>Medical Records</h3>
+                <p>Access and update patient medical history.</p>
+                <a href="#" class="btn">View Records</a>
+            </div>
+            <div class="card">
+                <h3>Billing Overview</h3>
+                <p>Monitor invoices and payments seamlessly.</p>
+                <a href="#" class="btn">View Billing</a>
+            </div>
+            <div class="card">
+                <h3>Profile Settings</h3>
+                <p>Update your profile and account settings.</p>
+                <a href="#" class="btn">Update Profile</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
