@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doctor Dashboard | MediFusion</title>
+    <title>Patient Dashboard | MediFusion</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
@@ -15,22 +15,13 @@
             background-color: #f9f9f9;
         }
         .navbar {
-            background-color: #304ffe;
+            background-color: black;
             padding: 1rem 2rem;
         }
         .navbar .logo {
             color: white;
             font-size: 1.5rem;
             text-decoration: none;
-        }
-        .navbar .nav-links li {
-            list-style: none;
-            display: inline;
-            margin: 0 1rem;
-        }
-        .navbar .nav-links a {
-            text-decoration: none;
-            color: white;
         }
         .sidebar {
             width: 200px;
@@ -52,8 +43,6 @@
             padding: 0;
             position: relative;
             top: 3%;
-            position: relative;
-            left: 8px;
         }
         .sidebar ul li {
             margin: 1rem 0;
@@ -111,6 +100,8 @@
             color: white;
             text-decoration: none;
             font-size: 25px;
+            position: relative;
+            left: 8px;
         }
     </style>
 </head>
@@ -124,47 +115,61 @@
             </a>
         </div>
         <ul>
-            <li><a href="#"><i class="fa-solid fa-user"></i> Patients</a></li>
-            <li><a href="#"><i class="fa-solid fa-calendar-check"></i> Appointments</a></li>
+            <li><a href="#"><i class="fa-solid fa-calendar-check"></i> Book Appointment</a></li>
             <li><a href="#"><i class="fa-solid fa-file-medical"></i> Medical Records</a></li>
-            <li><a href="#"><i class="fa-solid fa-credit-card"></i> Billing Overview</a></li>
+            <li><a href="#"><i class="fa-solid fa-credit-card"></i> Billing</a></li>
+            <li><a href="#"><i class="fa-solid fa-heart"></i> Health Tips</a></li>
             <li><a href="#"><i class="fa-solid fa-user-cog"></i> Profile Settings</a></li>
-            <li><a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+            <li><a href="../login.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
         </ul>
     </div>
 
     <!-- Main Content -->
     <div class="content">
-        <h1>Welcome, Doctor!</h1>
-        <p>Here are your quick links:</p>
+        <h1 id="welcome-message">Welcome, [Patient Name]!</h1>
+        <p>Manage your health with ease.</p>
 
         <div class="card-container">
             <div class="card">
-                <h3>Patients</h3>
-                <p>View and manage patient details effortlessly.</p>
-                <a href="#" class="btn">Manage Patients</a>
-            </div>
-            <div class="card">
-                <h3>Appointments</h3>
-                <p>Schedule and view upcoming appointments.</p>
-                <a href="#" class="btn">View Appointments</a>
+                <h3>Book Appointment</h3>
+                <p>Schedule your next consultation with just a click.</p>
+                <a href="#" class="btn">Book Now</a>
             </div>
             <div class="card">
                 <h3>Medical Records</h3>
-                <p>Access and update patient medical history.</p>
+                <p>Access your past and current medical history securely.</p>
                 <a href="#" class="btn">View Records</a>
             </div>
             <div class="card">
-                <h3>Billing Overview</h3>
-                <p>Monitor invoices and payments seamlessly.</p>
+                <h3>Billing</h3>
+                <p>Track payments and view past invoices easily.</p>
                 <a href="#" class="btn">View Billing</a>
             </div>
             <div class="card">
+                <h3>Health Tips</h3>
+                <p>Get personalized tips to maintain your well-being.</p>
+                <a href="#" class="btn">View Tips</a>
+            </div>
+            <div class="card">
                 <h3>Profile Settings</h3>
-                <p>Update your profile and account settings.</p>
-                <a href="#" class="btn">Update Profile</a>
+                <p>Update your profile details and preferences.</p>
+                <a href="#" class="btn">Edit Profile</a>
             </div>
         </div>
     </div>
+    <script>
+        // Fetch user data from localStorage
+        const loggedInUser = localStorage.getItem('loggedInUser');
+
+        // Access the role or name and update the welcome message
+            document.getElementById('welcome-message').textContent = `Welcome, ${loggedInUser}`;
+        
+
+        // Handle logout
+        document.getElementById('logout').addEventListener('click', function() {
+            localStorage.removeItem('loggedInUser');
+            localStorage.removeItem('authToken');
+        });
+    </script>
 </body>
 </html>
