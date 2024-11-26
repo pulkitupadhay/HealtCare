@@ -1,4 +1,33 @@
 
+:root {
+    /*colors*/
+    --orange-soda: #9f712d;
+    --cultured-1: hsl(0, 0%, 93%);
+    --cultured-2: hsl(192, 24%, 96%);
+    --alice-blue: hsl(210, 100%, 97%);
+    --cadet: hsl(200, 15%, 43%);
+    --white: hsl(0, 0%, 100%);
+    --opal: hsl(180, 20%, 62%);
+  
+    /**typography*/
+  
+    --ff-nunito-sans: "Nunito Sans", sans-serif;
+    --ff-poppins: "Poppins", sans-serif;
+    --fs-5: 0.875rem;
+    --fw-600: 600;
+  
+    /**
+       * transition
+       */
+    --transition: 0.25s ease;
+  
+    /*spacing*/
+    --section-padding: 100px;
+  
+    /*shadow*/
+    --shadow-2: 0 16px 32px hsla(188, 63%, 7%, 0.1);
+  }
+
 * {
     margin: 0;
     padding: 0;
@@ -381,3 +410,131 @@ footer {
         width: 100%;
     }
 }
+
+/* .service-list > li {
+    width: calc(33.33% - 20px);
+} */
+
+/*-----------------------------------*\
+    #SERVICE
+  \*-----------------------------------*/
+
+  .service {
+    background: var(--cultured-2);
+    padding-block: var(--section-padding);
+  }
+  
+  .service-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .service-card {
+    position: relative;
+    background: var(--white);
+    text-align: center;
+    padding: 40px 30px;
+    box-shadow: var(--shadow-2);
+  }
+  
+  .service-card .card-icon {
+    width: max-content;
+    margin-inline: auto;
+    margin-bottom: 20px;
+  }
+  
+  .service-card .card-title {
+    margin-bottom: 15px;
+  }
+  
+  .service-card .card-title > a:is(:hover, :focus) {
+    color: var(--orange-soda);
+  }
+  
+  .service-card .card-text {
+    color: var(--cadet);
+    font-size: var(--fs-5);
+    line-height: 1.8;
+    margin-bottom: 25px;
+  }
+  
+  .service-card .card-link {
+    color: var(--opal);
+    font-size: var(--fs-5);
+    font-weight: var(--fw-600);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .service-card:is(:hover, :focus) .card-link {
+    color: var(--orange-soda);
+  }
+  
+  .service-card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: var(--orange-soda);
+    transition: var(--transition);
+  }
+  
+  .service-card:is(:hover, :focus)::after {
+    width: 100%;
+  }
+  
+  .section-subtitle {
+    color: var(--orange-soda);
+    font-size: var(--fs-5);
+    font-weight: var(--fw-600);
+    padding: 5px 20px;
+    background: hsla(9, 100%, 62%, 0.1);
+    width: max-content;
+    border-radius: 50px;
+    margin-inline: auto;
+    margin-bottom: 15px;
+  }
+  
+  .section-title {
+    text-align: var(--text-align, center);
+    margin-bottom: var(--margin-bottom, 50px);
+  }
+
+  .h1,
+  .h2,
+  .h3 {
+    color: var(--dark-jungle-green);
+    font-family: var(--ff-poppins);
+    line-height: 1.3;
+  }
+  #name {
+    display: inline-block;
+    font-family: "Baskervville SC", serif;
+    font-weight: 700px;
+    font-style: normal;
+    /* margin-left: -100px; */
+  }
+  
+  .h1 {
+    font-size: var(--fs-1);
+    line-height: 1;
+  }
+  
+  .h2 {
+    font-size: var(--fs-2);
+  }
+  
+  .h3 {
+    font-size: var(--fs-4);
+    font-weight: var(--font-weight, 700);
+  }
+  
+  .h3 > a {
+    color: inherit;
+  }
