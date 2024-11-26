@@ -14,3 +14,4 @@ router.post('/book', bookAppointment);
 router.get('/', getAppointments);
 
 module.exports = router;
+
