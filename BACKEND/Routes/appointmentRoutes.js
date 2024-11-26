@@ -5,6 +5,7 @@ const ensureAuthenticated = require('../Middlewares/Auth');
 const router = express.Router();
 console.log('bookAppointment:',ensureAuthenticated, bookAppointment);
 console.log('getAppointments:',ensureAuthenticated, getAppointments);
+
 // Define routes
 router.post('/some-path', someMiddleware, someControllerFunction);
 
@@ -13,3 +14,4 @@ router.post('/book', bookAppointment);
 router.get('/', getAppointments);
 
 module.exports = router;
+
