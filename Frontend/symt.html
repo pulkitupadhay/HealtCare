@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediFusion | Healthcare Management Site</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="symtm.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fa-solid fa-hand-holding-droplet  fa-5x"></i>
+                <a href="index.html" style="display: inline; font-family: 'Protest Guerrilla';">
+                    Medi<span style="color: #9f712d;">Fusion</span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+    <body>
+        <div class="cont1">
+          <h1>Symptom Checker</h1>
+          <form id="symptom-form">
+            <div class="input-group">
+              <label for="symptoms">Select Your Symptoms:</label>
+              <select id="symptoms" multiple>
+                <option value="fever">Fever</option>
+                <option value="cough">Cough</option>
+                <option value="headache">Headache</option>
+                <option value="fatigue">Fatigue</option>
+                <option value="nausea">Nausea</option>
+                <option value="body-pain">Body Pain</option>
+                <option value="sore-throat">Sore Throat</option>
+                <option value="shortness-breath">Shortness of Breath</option>
+              </select>
+              <small>Hold CTRL (or CMD) to select multiple symptoms</small>
+            </div>
+            <button type="button" id="check-btn">Check Possible Conditions</button>
+          </form>
+          <div class="result">
+            <h2>Possible Conditions:</h2>
+            <ul id="condition-list"></ul>
+          </div>
+        </div>
+        <script src="symtm.js"></script>
+      </body>
+<!-- Footer -->
+<footer class="footer">
+    <h2>Contacts</h2><hr>
+    <div class="para">
+        <p>Phone no: +91 .. <br>Email Id:
+            <a href="#" style="color:rgba(0, 0, 255, 0.534);text-decoration: none;">..@gmail.com</a><br></p>
+    </div>
+    
+    <div id="social">
+        <ul>
+
+<!-- Instagram -->
+<li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" x "0px" y "0px" width "40" height "100"><path fill="#304ffe" d="{...}"></path></svg></a></li>
+</ul>
+</div>
+
+<p>&copy; 2024 MediFusion. All rights reserved.</p>
+</footer>
+
+</body>
+
+</html>
