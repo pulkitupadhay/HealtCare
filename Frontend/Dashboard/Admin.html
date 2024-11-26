@@ -111,13 +111,13 @@
             <li><a href="#"><i class="fa-solid fa-calendar-check"></i> Appointments</a></li>
             <li><a href="#"><i class="fa-solid fa-credit-card"></i> Billing</a></li>
             <li><a href="#"><i class="fa-solid fa-cogs"></i> System Settings</a></li>
-            <li><a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+            <li><a href="../login.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
         </ul>
     </div>
 
     <!-- Main Content -->
     <div class="content">
-        <h1>Welcome, Admin!</h1>
+        <h1 id="welcome-message" >Welcome, Admin!</h1>
         <p>Manage the MediFusion platform efficiently.</p>
 
         <div class="card-container">
@@ -148,5 +148,19 @@
             </div>
         </div>
     </div>
+    <script>
+        // Fetch user data from localStorage
+        const loggedInUser = localStorage.getItem('loggedInUser');
+
+        // Access the role or name and update the welcome message
+            document.getElementById('welcome-message').textContent = `Welcome, Mr. ${loggedInUser}`;
+        
+
+        // Handle logout
+        document.getElementById('logout').addEventListener('click', function() {
+            localStorage.removeItem('loggedInUser');
+            localStorage.removeItem('authToken');
+        });
+    </script>
 </body>
 </html>
