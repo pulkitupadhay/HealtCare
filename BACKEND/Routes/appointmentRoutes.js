@@ -5,7 +5,8 @@ const { verifyToken } = require('../Middlewares/authMiddleware');
 const router = express.Router();
 
 // Define routes
-router.post('/book', verifyToken, bookAppointment);
+router.post('/some-path', someMiddleware, someControllerFunction);
+
 router.get('/', verifyToken, getAppointments);
 
 module.exports = router;
