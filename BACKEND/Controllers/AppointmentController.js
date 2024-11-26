@@ -22,6 +22,7 @@ const getAppointments = async (req, res) => {
     }
 }
 module.exports = {
+    
     bookAppointment,
     getAppointments,
 }
