@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheduled Appointments</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            padding: 2rem;
+        }
+        h1 {
+            text-align: center;
+            color: #304ffe;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #304ffe;
+            color: white;
+        }
+        table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .no-appointments {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 1.2rem;
+            color: #9f712d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Scheduled Appointments</h1>
+        <table id="appointments-table">
+            <thead>
+                <tr>
+                    <th>Patient Name</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Reason</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Appointments will be dynamically added here -->
+            </tbody>
+        </table>
+        <p id="no-appointments-message" class="no-appointments" style="display: none;">
+            No scheduled appointments at the moment.
+        </p>
+    </div>
+    <script>
+        // Example data - Replace this with actual data fetching logic (e.g., API call)
+        const appointments = [
+            { patientName: "John Doe", date: "2024-11-28", time: "10:30 AM", reason: "Routine Checkup" },
+            { patientName: "Jane Smith", date: "2024-11-29", time: "11:00 AM", reason: "Follow-up Visit" },
+            { patientName: "Mike Johnson", date: "2024-12-01", time: "2:00 PM", reason: "Consultation" }
+        ];
+
+        // Render appointments in the table
+        const tableBody = document.getElementById('appointments-table').querySelector('tbody');
+        const noAppointmentsMessage = document.getElementById('no-appointments-message');
+
+        if (appointments.length > 0) {
+            appointments.forEach(appointment => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${appointment.patientName}</td>
+                    <td>${appointment.date}</td>
+                    <td>${appointment.time}</td>
+                    <td>${appointment.reason}</td>
+                `;
+                tableBody.appendChild(row);
+            });
+        } else {
+            noAppointmentsMessage.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
