@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Healthcare Management System</title>
-    <link rel="stylesheet" href="style.css">
+    <title>MediFusion | Healthcare Management Site</title>
+    <link rel="stylesheet" href="/Frontend/style.css">
+    <link rel="stylesheet" href="st.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
-<body>
-    <!-- Navigation (Same as index.html) -->
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="logo">
@@ -22,46 +22,73 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#features">Features</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About Us</a></li>
                 <li><a href="signup.html">Sign Up</a></li>
                 <li><a href="login.html">Login</a></li>
-
-
             </ul>
         </div>
     </nav>
 
-    <!-- Login Form -->
-    <section class="login-section">
-        <div class="container">
-            <h2>Login</h2>
-            <form id="login-form" style="border: 2px solid black; padding: 14px;border-radius: 20px;">
-                <label for="role">Select Role</label>
-                <select id="role" name="role" required>
-                    <option value="" disabled selected>Select your role</option>
-                    <option value="Admin">Admin</option>
-                    <option value="Doctor">Doctor</option>
-                    <option value="Patient">Patient</option>
-                </select>
-
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
-
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password" required>
-
-                <hr style="margin-bottom:14px;">
-
-                <button type="submit" class="btn">Login</button>
-            </form>
-        </div>
-    </section>
-
+<body>
+  <div class="cont2">
+    <h1>Stress and Anxiety Checker</h1>
+    <form id="stress-form">
+      <p>Please answer the following questions:</p>
+      <div class="question">
+        <label>1. I often feel overwhelmed or unable to cope with tasks:</label>
+        <select class="response" required>
+          <option value="">Select</option>
+          <option value="1">Never</option>
+          <option value="2">Sometimes</option>
+          <option value="3">Often</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="question">
+        <label>2. I find it hard to relax, even during leisure time:</label>
+        <select class="response" required>
+          <option value="">Select</option>
+          <option value="1">Never</option>
+          <option value="2">Sometimes</option>
+          <option value="3">Often</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="question">
+        <label>3. I experience physical symptoms like headaches, nausea, or fatigue due to stress:</label>
+        <select class="response" required>
+          <option value="">Select</option>
+          <option value="1">Never</option>
+          <option value="2">Sometimes</option>
+          <option value="3">Often</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <div class="question">
+        <label>4. I feel anxious or worried about the future:</label>
+        <select class="response" required>
+          <option value="">Select</option>
+          <option value="1">Never</option>
+          <option value="2">Sometimes</option>
+          <option value="3">Often</option>
+          <option value="4">Always</option>
+        </select>
+      </div>
+      <button type="button" id="calculate-btn">Check Your Stress Level</button>
+    </form>
+    <div class="result">
+      <h2 style="font:bold ;color: teal;">Your Stress and Anxiety Level: <span id="result-level" style="color: #9f712d;">--</span></h2>
+      <p id="feedback"></p>
+    </div>
+  </div>
+  <script src="st.js"></script>
+</body>
 <!-- Footer  -->
 <footer>
-    <h2 id="contact">Contacts</h2><hr>
-    <div class="para">
-    <p>Phone no : +91 1400410058<br>
-        Email Id : <a href="mailto:mediFusion@gmail.com" style="color:rgba(0, 0, 255, 0.534);text-decoration: none;">mediFusion@gmail.com</a><br></div>
+  <h2 id="contact">Contacts</h2><hr>
+  <div class="para">
+  <p>Phone no : +91 1400410058<br>
+      Email Id : <a href="mailto:mediFusion@gmail.com" style="color:rgba(0, 0, 255, 0.534);text-decoration: none;">mediFusion@gmail.com</a><br></div>
 <!-- social media links here -->
 <div id="social">
 <ul>
@@ -89,11 +116,11 @@
 </div>
 
 <div>
-    <p class="copyright">
-            made with &hearts; by <a href="#" style="text-decoration: none;">Code Whisperers</a><br />
-                &copy; 2024 <a href="#" style="text-decoration: none;">MediFusion</a>. All Rights Reserved
-            </p>
-        </div>
-    </footer>
+  <p class="copyright">
+          made with &hearts; by <a href="#" style="text-decoration: none;">Code Whisperers</a><br />
+              &copy; 2024 <a href="#" style="text-decoration: none;">MediFusion</a>. All Rights Reserved
+          </p>
+      </div>
+  </footer>
 </body>
 </html>

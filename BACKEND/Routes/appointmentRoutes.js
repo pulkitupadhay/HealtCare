@@ -7,7 +7,11 @@ console.log('bookAppointment:',ensureAuthenticated, bookAppointment);
 console.log('getAppointments:',ensureAuthenticated, getAppointments);
 
 // Define routes
+router.post('/some-path', someMiddleware, someControllerFunction);
+
+router.get('/', verifyToken, getAppointments);
 router.post('/book', bookAppointment);
 router.get('/', getAppointments);
 
 module.exports = router;
+

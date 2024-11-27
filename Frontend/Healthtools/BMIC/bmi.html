@@ -3,59 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Healthcare Management System</title>
-    <link rel="stylesheet" href="style.css">
+    <title>MediFusion | Healthcare Management Site</title>
+    <link rel="stylesheet" href="/Frontend/style.css">
+    <link rel="stylesheet" href="/Frontend/Health tools/BMIC/bmi.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation (Same as index.html) -->
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="logo">
                 <i class="fa-solid fa-hand-holding-droplet  fa-5x"></i>
-                <a href="index.html" style="display: inline; font-family: 'Protest Guerrilla';">
+                <a href="/Frontend/index.html" style="display: inline; font-family: 'Protest Guerrilla';">
                     Medi<span style="color: #9f712d;">Fusion</span>
                 </a>
             </div>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="/Frontend/index.html">Home</a></li>
                 <li><a href="#features">Features</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About Us</a></li>
                 <li><a href="signup.html">Sign Up</a></li>
                 <li><a href="login.html">Login</a></li>
-
-
             </ul>
         </div>
     </nav>
-
-    <!-- Login Form -->
-    <section class="login-section">
-        <div class="container">
-            <h2>Login</h2>
-            <form id="login-form" style="border: 2px solid black; padding: 14px;border-radius: 20px;">
-                <label for="role">Select Role</label>
-                <select id="role" name="role" required>
-                    <option value="" disabled selected>Select your role</option>
-                    <option value="Admin">Admin</option>
-                    <option value="Doctor">Doctor</option>
-                    <option value="Patient">Patient</option>
-                </select>
-
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
-
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password" required>
-
-                <hr style="margin-bottom:14px;">
-
-                <button type="submit" class="btn">Login</button>
-            </form>
+<!-- Bmi calculator  -->
+<body>
+    <div class="container">
+    <h1>BMI Calculator</h1>
+    <form id="bmi-form">
+        <div class="input-group">
+        <label for="height">Height (cm):</label>
+        <input type="number" id="height" placeholder="Enter your height" required>
         </div>
-    </section>
-
+        <div class="input-group">
+        <label for="weight">Weight (kg):</label>
+        <input type="number" id="weight" placeholder="Enter your weight" required>
+        </div>
+        <button type="button" id="calculate-btn">Calculate BMI</button>
+    </form>
+    <div class="result" style="border: 2px solid rgb(132, 84, 21);padding: 17px;">
+        <h2>Your Body Mass Index : <span id="bmi-result">--</span></h2>
+        <p id="bmi-category">Category : --</p>
+        </div>
+    </div>
+    <script src="/Frontend/Health tools/BMIC/bmi.js"></script>
+</body>
 <!-- Footer  -->
 <footer>
     <h2 id="contact">Contacts</h2><hr>
