@@ -1,7 +1,7 @@
 const Appointment = require('../Models/Appointment');
 
 // Function to book an appointment
-const bookAppointment = async (req, res) => {
+ exports.bookAppointment = async (req, res) => {
     try {
         const { patientName, doctorName, date, time, symptoms } = req.body;
         const appointment = new Appointment({ patientName, doctorName, date, time, symptoms });
@@ -13,7 +13,7 @@ const bookAppointment = async (req, res) => {
 }
 
 // Function to get all appointments
-const getAppointments = async (req, res) => {
+exports.getAppointments = async (req, res) => {
     try {
         const appointments = await Appointment.find();
         res.status(200).json(appointments);
@@ -21,8 +21,8 @@ const getAppointments = async (req, res) => {
         res.status(500).json({ error: 'Failed to fetch appointments' });
     }
 }
-module.exports = {
+// module.exports = {
     
-    bookAppointment,
-    getAppointments,
-}
+//     bookAppointment,
+//     getAppointments,
+// }
